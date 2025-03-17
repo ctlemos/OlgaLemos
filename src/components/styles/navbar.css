@@ -1,0 +1,22 @@
+.navbar {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	padding: 1rem 2rem;
+	backdrop-filter: blur(4px);
+}
+
+.navbar__wrapper {
+	display: flex;
+	justify-content: space-between;
+  	flex-wrap: wrap;
+}
+
+.navbar__menu ul li {
+	display: inline-block;
+}
+
+li a {
+	padding: 1rem;
+}
