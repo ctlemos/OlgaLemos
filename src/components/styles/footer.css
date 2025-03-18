@@ -24,3 +24,17 @@ footer {
     text-align: center;
     line-height: 25px;
 }
+
+/* RWD */
+@media screen and (max-width: 768px) {
+    hr {
+        width: 27rem;
+    }
+    
+    .footer__info {
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+    }
+}
