@@ -45,7 +45,7 @@ li a {
 		top: 0;
 		width: 50%;
 		height: 100vh;
-		background: #402412;
+		background: var(--warm-beige-color);
 	}
 
 	.navbar__menu.active ul {
@@ -71,7 +71,7 @@ li a {
 		width: 25px;
 		height: 3px;
 		margin: 5px auto;
-		background-color: #fff;
+		background-color: var(--secondary-color);
 		transition: all 600ms ease-in-out;
 	}
 	.navbar__hamburger.active .bar:nth-child(1) {

@@ -14,7 +14,7 @@ const Sobre = () => {
         </div>
         
         <div className='about__main_wrapper-img'>
-          <img className='about__img' src={sobreData.img} alt="woman cooking"/>
+          <img className='about__img' src={sobreData.img} alt="senhora a cozinhar"/>
         </div>
       </section> 
     </div>

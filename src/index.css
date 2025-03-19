@@ -13,6 +13,15 @@
 	position: relative;
 }
 
+:root {
+    --main-color: #EBE9DD;
+    --secondary-color: #000;
+
+	--brown-color: #402412;
+	--warm-beige-color: #D4C7Af;
+    --hover-color: palevioletred;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
@@ -20,18 +29,18 @@ body {
 	font-weight: 300;
   	font-style: normal;
 	scroll-behavior: smooth;
+	background: var(--main-color);
 }
 
 li, a {
 	list-style: none;
 	text-decoration: none;
-	color: #000;
 	font-size: 1rem;
 	text-transform: uppercase;
 }
 
 a:hover {
-	color: palevioletred !important;
+	color: var(--hover-color) !important;
 }
 
 h1 {
