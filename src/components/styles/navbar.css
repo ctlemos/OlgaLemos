@@ -28,6 +28,10 @@ li a {
 
 /* RWD */
 @media screen and (max-width: 991px) {
+	.navbar {
+		z-index: 10;
+	}
+
 	.navbar__menu {
 		display: none;
 	}
@@ -41,8 +45,7 @@ li a {
 		top: 0;
 		width: 50%;
 		height: 100vh;
-		background: #ede3ce;
-		z-index: 10;
+		background: #402412;
 	}
 
 	.navbar__menu.active ul {
@@ -61,7 +64,6 @@ li a {
 	.navbar__hamburger {
 		display: block;
 		cursor: pointer;
-		z-index: 20;
 	}
 	
 	.bar {
@@ -69,7 +71,7 @@ li a {
 		width: 25px;
 		height: 3px;
 		margin: 5px auto;
-		background-color: #000;
+		background-color: #fff;
 		transition: all 600ms ease-in-out;
 	}
 	.navbar__hamburger.active .bar:nth-child(1) {

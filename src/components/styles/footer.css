@@ -30,11 +30,11 @@ footer {
     hr {
         width: 27rem;
     }
-    
+
     .footer__info {
-       display: flex;
-       flex-wrap: wrap;
-       align-items: center;
-       justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 }

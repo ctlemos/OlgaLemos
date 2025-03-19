@@ -1,6 +1,6 @@
 .home__main {
 	width: 100vw;
-	height: 100vh;
+	min-height: 100vh;
 	background-image: url('/fundo.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;

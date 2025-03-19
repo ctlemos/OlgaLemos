@@ -24,12 +24,11 @@ const Navbar = () => {
   
               <nav className={"navbar__menu" + (isOpen ? ' active' : '')}>
                   <ul  onClick={toggleMenu}>
-                      <li style={{ color: isHome ? 'black' : 'white' }}><NavLink to="/sobre">Sobre</NavLink></li>
-                      <li style={{ color: isHome ? 'black' : 'white' }}><NavLink to="/servicos">Serviços</NavLink></li>
-                      <li style={{ color: isHome ? 'black' : 'white' }}><NavLink to="/contacto">Contacto</NavLink></li>
+                      <li><NavLink to="/sobre" style={{ color: isHome ? 'white' : 'black' }}>Sobre</NavLink></li>
+                      <li><NavLink to="/servicos" style={{ color: isHome ? 'white' : 'black' }}>Serviços</NavLink></li>
+                      <li><NavLink to="/contacto" style={{ color: isHome ? 'white' : 'black' }}>Contacto</NavLink></li>
                   </ul>
               </nav>
-          
   
               <div className={"navbar__hamburger" + (isOpen ? ' active' : '')}
                 onClick={toggleMenu}>
