@@ -35,7 +35,7 @@
 	}
 }
 
-@media(max-width: 992px) {
+@media screen and (max-width: 992px) {
 	.about__main_wrapper-info {
         display: flex;
         flex-direction: column;

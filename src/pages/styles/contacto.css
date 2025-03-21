@@ -24,7 +24,7 @@
 }
 
 /* RWD */
-@media(max-width: 992px) {
+@media screen and (max-width: 992px) {
 	.contact__main-info {
         display: flex;
         flex-direction: column;

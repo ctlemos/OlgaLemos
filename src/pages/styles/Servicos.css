@@ -23,20 +23,21 @@ button {
     gap: 50px;
 }
 
+/* Cards Colours */
 .servicos__main_card_wrapper_cards-card:first-child, .servicos__main_card_wrapper_cards-card:last-child {
-    background-color: var(--circle-one);
+    background-color: var(--khaki);
     color: var(--main-color);
 }
 .servicos__main_card_wrapper_cards-card:nth-child(2) {
-    background-color: var(--circle-two);
+    background-color: var(--timberwolf);
     color: var(--secondary-color);
 }
 .servicos__main_card_wrapper_cards-card:nth-child(3) {
-    background-color: var(--circle-three);
+    background-color: var(--camouflage-green);
     color: var(--main-color);
 }
 .servicos__main_card_wrapper_cards-card:nth-child(4) {
-    background-color: var(--circle-four);
+    background-color: var(--dark-gold);
     color: var(--main-color);
 }
 
@@ -48,7 +49,7 @@ button {
     text-align: center;
     height: 150px;
     width: 150px;
-    border-radius: 5rem;
+    border-radius: 50%;
     cursor: pointer;
     transition: 400ms;
 }
@@ -119,11 +120,60 @@ button {
 }
   
   
-
-/* RWD */
-/* @media(max-width: 992px) {
+/* RWD  */
+/* IMG SLIDER */
+@media screen and (max-width: 768px) {
+    .servicos__main_card-wrapper {
+       padding-bottom: 7rem;
+   }
+   
     .slider__panel {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
+       width: 100%;
     }
-} */
+
+    .slider__container-content {
+       width: 90vw;
+    }
+
+    .slider__prev-btn, .slider__next-btn {
+       height: 5em;
+       margin: 0.1rem;
+    }
+
+    .slide__img {
+       width: 400px; 
+       margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .servicos__main_card_wrapper-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap:40px;
+    }
+
+    .servicos__main_card_wrapper_cards-card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .servicos__main_card_wrapper_cards-card:last-child {
+        grid-column: span 2; 
+        justify-self: center; 
+    }
+
+    .servicos__main_card_wrapper-cards .servicos__main_card_wrapper_cards-card:hover {
+        transform: scale(1.2, 1.2);
+    }
+      
+    .servicos__main_card_wrapper-cards:hover > .servicos__main_card_wrapper_cards-card:not(:hover) {
+        filter: blur(5px);
+        transform: scale(1.2, 1.2);
+    } 
+    
+    /* Circle stays bigger while gallery open */
+    .hover-effect {
+        transform: scale(1.3, 1.3);
+    }
+}
