@@ -1,41 +1,20 @@
-.contact__main-info {
-	width: 100%;
-	display: flex;
-	padding-left: 3rem;
-	gap: 2rem;
-	text-align: justify;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: flex-start;
+.contact__main_info-text-whatsapp {
+	padding-top: 1rem;
+	padding-right: 0.5rem;
 }
 
-.contact__main_info-text {
-	width: 20rem;
-	padding-top: 5rem;
-}
-
-.contact__main-img {
-	padding-right: 5rem;
+.whatsapp {
+	text-transform: inherit;
+	color: var(--secondary-color);
 }
 
 .contact__img {
 	max-width: 350px;
-	padding-bottom: 100px;
 }
 
-/* RWD */
-@media screen and (max-width: 992px) {
-	.contact__main-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-    .contact__main_info-text {
-        padding-bottom: 5rem;
-    }
-
-	.contact__main_info-text p{
-        text-align: justify;
-    }
+@media screen and (max-width: 768px) {
+	.contact__img {
+		max-width: 250px;
+		margin-left: 5rem;
+	}
 }

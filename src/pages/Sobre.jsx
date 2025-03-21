@@ -8,12 +8,12 @@ const Sobre = () => {
         <h1>{sobreData.title}</h1>
       </div>
     
-      <section className='about__main_wrapper-info'>
-        <div className='about__main_info-text'>
+      <section className='main__wrapper-info'>
+        <div className='main__info-text'>
           <p>{sobreData.description}</p>
         </div>
         
-        <div className='about__main_wrapper-img'>
+        <div className='main__wrapper-img'>
           <img className='about__img' src={sobreData.img} alt="senhora a cozinhar"/>
         </div>
       </section> 

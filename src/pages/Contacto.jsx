@@ -1,6 +1,7 @@
 import React from 'react';
 import './styles/Contacto.css';
 import contactoData from '../js/contactoData';
+import { IoLogoWhatsapp } from "react-icons/io";
 
 const Contacto = () => {
     return (
@@ -9,12 +10,18 @@ const Contacto = () => {
             <h1>{contactoData.title}</h1>
           </div>
     
-          <section className='contact__main-info'>
-            <div className='contact__main_info-text'>
-              <p>{contactoData.info}</p>
+          <section className='main__wrapper-info'>
+            <div className='main__info-text'>
+              <p>{contactoData.address}</p>
+
+              <div className='contact__main_info-text-whatsapp'>
+                <a className='whatsapp' href="https://wa.me/351933251197?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer">
+                  <IoLogoWhatsapp /> {contactoData.contact}
+                </a>
+              </div>
             </div>
     
-            <div className='contact__main-img'>
+            <div className='main__wrapper-img'>
               <img className='contact__img' src={contactoData.img} alt="pessoas a comerem juntas" />
             </div>
           </section>
