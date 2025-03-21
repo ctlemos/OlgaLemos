@@ -4,8 +4,8 @@ import contactoData from '../js/contactoData';
 
 const Contacto = () => {
     return (
-        <div className='contact__main'>     
-          <div className='contact__main-title'>
+        <div className='main'>     
+          <div className='main__title'>
             <h1>{contactoData.title}</h1>
           </div>
     

@@ -3,8 +3,8 @@ import './styles/sobre.css';
 
 const Sobre = () => {
   return (
-    <div className='about__main'>
-      <div className='about__main-title'> 
+    <div className='main'>
+      <div className='main__title'> 
         <h1>{sobreData.title}</h1>
       </div>
     

@@ -8,3 +8,4 @@ This project is aimed at a specific customer who is already familiar with the br
 npm installation:
 - react-dom
 - react-router-dom
+- react-icons
