@@ -20,6 +20,12 @@
 	--brown-color: #402412;
 	--warm-beige-color: #D4C7Af;
     --hover-color: palevioletred;
+
+	/* Circles */
+	--circle-one: #C6A28D;
+	--circle-two: #E1DAD6;
+	--circle-three: #868668;
+	--circle-four: #AD6237;
 }
 
 body {

@@ -1,4 +1,4 @@
-import products from '../js/servicosData';
+import { products } from '../js/servicosData';
 import { useState, useRef} from 'react';
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import './styles/Servicos.css';
@@ -8,6 +8,7 @@ const Servicos = () => {
 
 	const [menuItem, setMenuItem] = useState(products);
 	const [showGallery, setShowGallery] = useState(false);
+	const [selectedCategory, setSelectedCategory] = useState(null);
 	const imageContainerRef = useRef(null);
 	
 	//gallery
@@ -15,6 +16,7 @@ const Servicos = () => {
 		const newItems = products.filter(item => item.name === name);
 		setMenuItem(newItems);
         setShowGallery(true);
+		setSelectedCategory(name);
 	};
 
 	//image slider
@@ -33,20 +35,30 @@ const Servicos = () => {
 			</div>	
 
 			<section className='servicos__main_card-wrapper'>
-				<div className="servicos__main_card_wrapper-cards">
-					<button className="servicos__main_card_wrapper_cards-card" onClick={() => filterItems('BOLOS')}>
+				<div className='servicos__main_card_wrapper-cards'>
+					<button 
+						className={`servicos__main_card_wrapper_cards-card ${selectedCategory === 'BOLOS' ? 'hover-effect' : ''}`} 
+						onClick={() => filterItems('BOLOS')}>
 						Bolos de Festa
 					</button>
-					<button className="servicos__main_card_wrapper_cards-card" onClick={() => filterItems('SOBREMESAS')}>
+					<button 
+						className={`servicos__main_card_wrapper_cards-card ${selectedCategory === 'SOBREMESAS' ? 'hover-effect' : ''}`} 
+						onClick={() => filterItems('SOBREMESAS')}>
 						Sobremesas 
 					</button>
-					<button className="servicos__main_card_wrapper_cards-card" onClick={() => filterItems('FRUTAS')}>
+					<button 
+						className={`servicos__main_card_wrapper_cards-card ${selectedCategory === 'FRUTAS' ? 'hover-effect' : ''}`} 
+						onClick={() => filterItems('FRUTAS')}>
 						Frutas
 					</button>
-					<button className="servicos__main_card_wrapper_cards-card" onClick={() => filterItems('PRATOS-QUENTES')}>
+					<button 
+						className={`servicos__main_card_wrapper_cards-card ${selectedCategory === 'PRATOS-QUENTES' ? 'hover-effect' : ''}`} 
+						onClick={() => filterItems('PRATOS-QUENTES')}>
 						Pratos Quentes
 					</button>
-					<button className="servicos__main_card_wrapper_cards-card" onClick={() => filterItems('TAPAS-PETISCOS')}>
+					<button 
+						className={`servicos__main_card_wrapper_cards-card ${selectedCategory === 'TAPAS-PETISCOS' ? 'hover-effect' : ''}`} 
+						onClick={() => filterItems('TAPAS-PETISCOS')}>
 						Tapas & Petiscos
 					</button>
 				</div>
