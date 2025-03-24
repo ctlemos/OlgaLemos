@@ -5,6 +5,7 @@
 	left: 0;
 	padding: 1rem 2rem;
 	backdrop-filter: blur(4px);
+	z-index: 1;
 }
 
 .navbar__wrapper {
@@ -25,6 +26,10 @@ li a {
 	display: none;	
 }
 
+/* To show which link is open */
+.active {
+	color: var(--hover-color) !important;
+}
 
 /* RWD */
 @media screen and (max-width: 991px) {
