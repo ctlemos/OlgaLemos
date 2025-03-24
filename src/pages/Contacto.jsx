@@ -2,6 +2,8 @@ import React from 'react';
 import './styles/Contacto.css';
 import contactoData from '../js/contactoData';
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FaFacebookMessenger } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
 
 const Contacto = () => {
     return (
@@ -13,10 +15,21 @@ const Contacto = () => {
           <section className='main__wrapper-info'>
             <div className='main__info-text'>
               <p>{contactoData.address}</p>
+              
+              <div className='contact__main_info-text-contacts'>
+                {/* Phone */}
+                <a className='phone' href={contactoData.phone}> 
+                  <FaPhone /> {contactoData.contact} <small>(Custo chamada para rede fixa nacional)</small>
+                </a>
 
-              <div className='contact__main_info-text-whatsapp'>
-                <a className='whatsapp' href="https://wa.me/351933251197?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank" rel="noopener noreferrer">
-                  <IoLogoWhatsapp /> {contactoData.contact}
+                {/* Whatsapp */}
+                <a className='whatsapp' href={`https://wa.me/${contactoData.phone.replace("tel:", "")}?text=Olá,%20gostaria%20de%20mais%20informações!`} target="_blank" rel="noopener noreferrer">
+                  <IoLogoWhatsapp /> WhatsApp 
+                </a>
+
+                {/* Messenger */}
+                <a className='messenger' href={contactoData.facebook} target="_blank" rel="noopener noreferrer">
+                  <FaFacebookMessenger /> Facebook Messenger 
                 </a>
               </div>
             </div>

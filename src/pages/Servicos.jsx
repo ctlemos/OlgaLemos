@@ -77,6 +77,12 @@ const Servicos = () => {
 						</div>
 						<div className='slider__next-btn' onClick={Next}><FaArrowCircleRight /></div>
 					</div>
+					
+					<div className='slider__container-btn'>
+						<button className='btn-catalog'>
+							<a href="https://www.facebook.com/docariaparabens/photos_by" target="_blank" rel="noopener noreferrer">Ver restante catálogo</a>
+						</button>
+					</div>
 				</div>
 			)} 
 		</div>

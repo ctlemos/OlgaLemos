@@ -1,9 +1,13 @@
-.contact__main_info-text-whatsapp {
+.contact__main_info-text-contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	line-height: 2rem;
 	padding-top: 1rem;
 	padding-right: 0.5rem;
 }
 
-.whatsapp {
+.whatsapp, .messenger, .phone {
 	text-transform: inherit;
 	color: var(--secondary-color);
 }
@@ -11,6 +15,8 @@
 .contact__img {
 	max-width: 350px;
 }
+
+
 
 @media screen and (max-width: 768px) {
 	.contact__img {
