@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="navbar">
             <div className="navbar__wrapper">
   
-              <Link to="/" style={{ color: isHome ? 'white' : 'black' }}><div className="logo">Gradient Landing Page</div></Link>
+              <Link to="/" style={{ color: isHome ? 'white' : 'black' }}><div className="logo">Olga Lemos</div></Link>
   
               <nav className={"navbar__menu" + (isOpen ? ' active' : '')}>
                   <ul  onClick={toggleMenu}>
