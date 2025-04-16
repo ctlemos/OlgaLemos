@@ -1,4 +1,4 @@
-import homeData from '../js/homeData';
+import homeData from '../assets/js/homeData';
 import './styles/home.css'
 
 const Home = () => {

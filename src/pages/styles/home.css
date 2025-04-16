@@ -14,7 +14,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	color: #fff;
+	color: var(--main-color);
 }
 
 .home__main-page h1 {
@@ -27,4 +27,11 @@
     font-family: "Dancing Script", cursive;
     font-size: 2rem;
 	font-weight: lighter;
+}
+
+@media screen and (max-width: 768px) {
+	.home__main-page h1 {
+		font-size: 7rem;
+		line-height: 6rem;
+	}	
 }

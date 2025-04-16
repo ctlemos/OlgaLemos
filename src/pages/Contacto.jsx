@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/Contacto.css';
-import contactoData from '../js/contactoData';
+import contactoData from '../assets/js/contactoData';
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";

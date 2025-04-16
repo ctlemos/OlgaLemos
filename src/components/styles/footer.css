@@ -37,7 +37,7 @@ small {
 /* RWD */
 @media screen and (max-width: 768px) {
     hr {
-        width: 27rem;
+        width: 20rem;
     }
 
     .footer__info {
@@ -46,6 +46,8 @@ small {
         align-items: center;
         justify-content: center;
         font-size: 14px;
+        line-height: 10px;
+        margin: 0.5rem 0.3rem;
     }
 
     .facebook {

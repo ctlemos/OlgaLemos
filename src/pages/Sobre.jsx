@@ -1,4 +1,4 @@
-import sobreData from '../js/sobreData';
+import sobreData from '../assets/js/sobreData';
 import './styles/sobre.css';
 
 const Sobre = () => {

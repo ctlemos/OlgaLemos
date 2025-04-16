@@ -1,4 +1,4 @@
-import { products } from '../js/servicosData';
+import servicosData, { products } from '../assets/js/servicosData';
 import { useState, useRef} from 'react';
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 import './styles/servicos.css';
@@ -31,7 +31,7 @@ const Servicos = () => {
 	return (
 		<div className='main'>
 			<div className='main__title'>
-				<h1>Serviços</h1>
+				<h1>{servicosData.title}</h1>
 			</div>	
 
 			<section className='servicos__main_card-wrapper'>
