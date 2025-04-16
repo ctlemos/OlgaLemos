@@ -21,10 +21,10 @@ const Servicos = () => {
 
 	//image slider
 	const Prev = () => {
-        imageContainerRef.current.scrollLeft -= 250;
+        imageContainerRef.current.scrollLeft -= 300;
     };
     const Next = () => {
-        imageContainerRef.current.scrollLeft += 250;
+        imageContainerRef.current.scrollLeft += 300;
     };
 
 
