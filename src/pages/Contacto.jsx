@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/Contacto.css';
+import './styles/contacto.css';
 import contactoData from '../assets/js/contactoData';
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFacebookMessenger } from "react-icons/fa";
