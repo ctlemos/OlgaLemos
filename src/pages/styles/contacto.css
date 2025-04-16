@@ -20,6 +20,10 @@
 
 
 @media screen and (max-width: 768px) {
+	.contact__main_info-text-contacts {
+		padding-top: 0;
+	}
+
 	.contact__img {
 		max-width: 250px;
 		margin-left: 5rem;
