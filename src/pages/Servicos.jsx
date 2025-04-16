@@ -1,7 +1,7 @@
 import servicosData, { products } from '../assets/js/servicosData';
 import { useState, useRef} from 'react';
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import './styles/servicos.css';
+import './styles/servico.css';
 
 
 const Servicos = () => {
