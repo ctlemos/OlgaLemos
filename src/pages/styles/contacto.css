@@ -8,6 +8,8 @@
 }
 
 .whatsapp, .messenger, .phone {
+	padding: 0.3rem 0;
+	font-size: 1.1rem;
 	text-transform: inherit;
 	color: var(--secondary-color);
 }
@@ -21,7 +23,11 @@
 
 @media screen and (max-width: 768px) {
 	.contact__main_info-text-contacts {
-		padding-top: 0;
+		padding-top: 1rem;
+	}
+
+	.whatsapp, .messenger, .phone {
+		font-size: 1.2rem;
 	}
 
 	.contact__img {

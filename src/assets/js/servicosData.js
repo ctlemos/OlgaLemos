@@ -73,9 +73,9 @@ export const products = [
 	},
 	{
 		id: 12,		
-		img: '../img/bolos/60-anos.jpg',
+		img: '../img/bolos/1-ano.jpg',
 		name: 'BOLOS',
-		descricao: 'Bolo 60 anos',
+		descricao: 'Bolo 1 ano',
 	},
 	{
 		id: 13,		

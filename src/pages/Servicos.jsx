@@ -1,15 +1,21 @@
 import servicosData, { products } from '../assets/js/servicosData';
 import { useState, useRef} from 'react';
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+import { IoClose } from "react-icons/io5";
+
 import './styles/servico.css';
 
 
 const Servicos = () => {
-
+	/* Show Gallery */
 	const [menuItem, setMenuItem] = useState(products);
 	const [showGallery, setShowGallery] = useState(false);
 	const [selectedCategory, setSelectedCategory] = useState(null);
+	/* Img Slider */
 	const imageContainerRef = useRef(null);
+	/* Gallery img pop-up */
+	const [isPopupOpen, setIsPopupOpen] = useState(false);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	
 	//gallery
 	const filterItems = name => {
@@ -27,6 +33,26 @@ const Servicos = () => {
         imageContainerRef.current.scrollLeft += 300;
     };
 
+	/* Gallery img pop-up */
+	const openPopup = (index) => {
+		setCurrentImageIndex(index);
+		setIsPopupOpen(true);
+	};
+	const closePopup = () => {
+		setIsPopupOpen(false);
+	};
+	const showNextImage = (e) => {
+		e.stopPropagation();
+		if (menuItem.length === 0) return;
+		setCurrentImageIndex((prev) => (prev + 1) % menuItem.length);
+	};
+	
+	const showPrevImage = (e) => {
+		e.stopPropagation();
+		if (menuItem.length === 0) return;
+		setCurrentImageIndex((prev) => (prev - 1 + menuItem.length) % menuItem.length);
+	};
+	
 
 	return (
 		<div className='main'>
@@ -70,7 +96,7 @@ const Servicos = () => {
 						<div className='slider__prev-btn' onClick={Prev}><FaArrowCircleLeft /></div>
 						<div className='slider__panel' ref={imageContainerRef}>
 							{menuItem.map((item, index) => (
-								<div key={index}>
+								<div key={index} onClick={() => openPopup(index)}>
 								<img src={item.img} title={item.name} alt={item.name} className='slide__img'/>
 								</div>
 							))}
@@ -85,7 +111,24 @@ const Servicos = () => {
 					</div>
 				</div>
 			)} 
-		</div>
+			
+			{isPopupOpen && (
+				<div className="popup__overlay" onClick={closePopup}>
+					<div className="popup__content" onClick={(e) => e.stopPropagation()}>
+						<button className="popup__close-btn" onClick={closePopup}><IoClose /></button>
+						<button className="popup__nav left" onClick={showPrevImage}><FaArrowCircleLeft /></button>
+						{menuItem[currentImageIndex] && (
+							<img
+								src={menuItem[currentImageIndex].img}
+								alt="popup"
+								className="popup__img"
+							/>
+						)}
+						<button className="popup__nav right" onClick={showNextImage}><FaArrowCircleRight /></button>
+					</div>
+				</div>
+			)}
+		</div>			
 	);
 };
 

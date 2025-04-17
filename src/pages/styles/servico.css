@@ -1,10 +1,10 @@
 .servicos__main_card-wrapper {
-    padding: 5rem;
+    padding: 8.7rem;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom: 14.05rem;
+    padding-bottom: 14.8rem;
 }
 
 button {
@@ -94,8 +94,9 @@ button {
 }
 
 .slider__prev-btn, .slider__next-btn {
+    font-size: 1.8rem;
     width: 2em;
-    height: 2em;
+    height: 4em;
     margin: 2rem;
     cursor: pointer;
     background-position: center;
@@ -109,14 +110,14 @@ button {
 }
 
 .slide__img {
-    scroll-snap-align: start;
-   /*  width: 270px;*/ 
+    scroll-snap-align: start; 
     width: auto;
-    border-radius: 50px;
+    border-radius: 30px;
     padding: 1rem;
-    height: 300px;
+    height: 400px;
     object-fit: cover;
     flex-shrink: 0;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -164,12 +165,96 @@ button {
     transition-duration: 400ms;
     transition-property: width, left;
 }
+
+/* GALLERY IMG POP-UP */
+.popup__overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup__content {
+	position: relative;
+	width: 90%;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to { 
+        opacity: 1;
+    }
+}
+
+.popup__img {
+	max-width: 100%;
+	max-height: 100%;
+    object-fit: contain;
+	border-radius: 30px;
+	box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.popup__nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: white;
+	font-size: 2.5rem;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.popup__nav.left {
+	left: 50px;
+}
+
+.popup__nav.right {
+	right: 50px;
+}
+
+/* Close Pop-up BTN */
+.popup__close-btn {
+	position: absolute;
+	top: 0;
+	right: 50px;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	font-size: 2.2rem;
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	z-index: 1020;
+	transition: background 0.2s ease;
+}
+
+.popup__close-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
   
 /* RWD  */
 /* IMG SLIDER */
 @media screen and (max-width: 768px) {
     .servicos__main_card-wrapper {
-       padding-bottom: 7rem;
+        padding: 5rem;
+        padding-bottom: 7rem;
    }
    
     .slider__panel {
@@ -180,9 +265,38 @@ button {
        width: 90vw;
     }
 
+    .slide__img {
+        padding: 0.5rem;
+        height: 300px;
+    }
+
     .slider__prev-btn, .slider__next-btn {
-       height: 5em;
-       margin: 0.1rem;
+        font-size: 1.4rem;
+        height: 5em;
+        margin: 0.1rem;
+    }
+
+    .popup__nav {
+        font-size: 1.8rem;
+    }
+
+    .popup__close-btn {
+        opacity: 0.7;
+        right: -15px;
+    }
+
+    .popup__nav.left {
+        opacity: 0.5;
+		left: -15px;
+	}
+	.popup__nav.right {
+        opacity: 0.5;
+		right: -15px;
+	}
+
+    .popup__overlay {
+        overflow-y: auto;
+        touch-action: auto;
     }
 }
 
