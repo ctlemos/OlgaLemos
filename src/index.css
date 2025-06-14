@@ -60,6 +60,12 @@ body {
 	padding: 2rem 2rem;
 }
 
+.main__info-text {
+	font-size: 1.2rem;
+	width: 35rem;
+	padding-top: 5rem;
+}
+
 .main__wrapper-img {
 	padding: 2rem 0 5rem 0;
 }
@@ -100,7 +106,7 @@ h1 {
 		padding: 0.5rem;
 	}
 
-	.main__info-text-about, .main__info-text-contact {
+	.main__info-text {
 		width: 20rem;
 		padding-top: 2rem;
 	}
@@ -118,7 +124,7 @@ h1 {
         justify-content: center;
     }
 	
-    .main__info-text-about, .main__info-text-contact {
+    .main__info-text {
         padding-bottom: 2rem;
     }
 }

@@ -9,7 +9,7 @@ const Sobre = () => {
       </div>
     
       <section className='main__wrapper-info'>
-        <div className='main__info-text-about'>
+        <div className='main__info-text'>
           <p>{sobreData.description}</p>
         </div>
         

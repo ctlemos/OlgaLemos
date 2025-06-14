@@ -20,7 +20,7 @@
 
 .map_container iframe {
   width: 100%;
-  height: clamp(250px, 21vw, 400px);
+  height: clamp(280px, 21vw, 400px);
   border: 0;
   border-radius: 8px;
   padding: 1rem 0 3rem 0;
@@ -45,6 +45,11 @@
 		padding-top: 1rem;
 	}
 
+	.main__info-text-contact {
+		width: 20rem;
+		padding-top: 2rem;
+	}
+
 	.whatsapp, .messenger, .phone {
 		font-size: 1.2rem;
 	}
@@ -55,6 +60,12 @@
 	}
 
 	.map_container iframe {
-		width: 50%;
+		width: 100%;
 	}
+}
+
+@media screen and (max-width: 992px) {
+    .main__info-text-contact {
+        padding-bottom: 2rem;
+    }
 }
