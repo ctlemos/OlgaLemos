@@ -27,7 +27,12 @@ const Servicos = () => {
 
 		// Smooth scroll to the gallery, after a little delay to asure the gallery is rendered
 		setTimeout(() => {
-			galleryRef.current?.scrollIntoView({ behavior: 'smooth' });
+			const topOffset = 100;
+			const elementPosition = galleryRef.current.getBoundingClientRect().top + window.pageYOffset;
+			window.scrollTo({
+				top: elementPosition - topOffset,
+				behavior: 'smooth'
+			});
 		}, 100);
 	};
 
