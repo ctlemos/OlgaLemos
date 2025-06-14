@@ -27,7 +27,7 @@ const Servicos = () => {
 
 		// Smooth scroll to the gallery, after a little delay to asure the gallery is rendered
 		setTimeout(() => {
-			const topOffset = 100;
+			const topOffset = 100; // This ensures that the gallery is 80px below the top of the window, i.e. visible just below the header.
 			const elementPosition = galleryRef.current.getBoundingClientRect().top + window.pageYOffset;
 			window.scrollTo({
 				top: elementPosition - topOffset,
