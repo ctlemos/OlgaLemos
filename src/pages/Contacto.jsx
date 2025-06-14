@@ -4,9 +4,11 @@ import contactoData from '../assets/js/contactoData';
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaFacebookMessenger } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
+import PageWrapper from '../components/PageWrapper';
 
 const Contacto = () => {
     return (
+      <PageWrapper>
         <div className='main'>     
           <div className='main__title'>
             <h1>{contactoData.title}</h1>
@@ -50,6 +52,7 @@ const Contacto = () => {
             </div>
           </section>
         </div>
+      </PageWrapper>
     )
 }
 
