@@ -41,7 +41,8 @@ const Contacto = () => {
                   style={{ border: 0 }}
                   allowfullscreen="" 
                   loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade">
+                  referrerpolicy="no-referrer-when-downgrade"
+                  sandbox="allow-scripts allow-same-origin">
                 </iframe>
               </div>
               
