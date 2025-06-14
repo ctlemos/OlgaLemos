@@ -12,6 +12,7 @@ const Servicos = () => {
 	const [showGallery, setShowGallery] = useState(false);
 	const [selectedCategory, setSelectedCategory] = useState(null);
 	/* Img Slider */
+	const galleryRef = useRef(null);
 	const imageContainerRef = useRef(null);
 	/* Gallery img pop-up */
 	const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -23,6 +24,11 @@ const Servicos = () => {
 		setMenuItem(newItems);
         setShowGallery(true);
 		setSelectedCategory(name);
+
+		// Smooth scroll to the gallery, after a little delay to asure the gallery is rendered
+		setTimeout(() => {
+			galleryRef.current?.scrollIntoView({ behavior: 'smooth' });
+		}, 100);
 	};
 
 	//image slider
@@ -91,7 +97,7 @@ const Servicos = () => {
 			</section>	
 						
 			{showGallery && menuItem.length > 0 && (
-				<div className='slider__container'>
+				<div className='slider__container' ref={galleryRef}>
 					<div className='slider__container-content'>
 						<div className='slider__prev-btn' onClick={Prev}><FaArrowCircleLeft /></div>
 						<div className='slider__panel' ref={imageContainerRef}>
